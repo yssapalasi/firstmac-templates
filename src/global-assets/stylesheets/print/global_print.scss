@@ -1,0 +1,12 @@
+@import '../utils/reset';
+@import '../utils/crop_marks';
+@import '../global/typography';
+
+body, main {
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  background: whitesmoke;
+}

@@ -21,7 +21,7 @@ var tmp                = './.tmp';
 var prod               = './build';
 var base = {
   production: 'http://net-engine.github.io/outfit-starter-templates',
-  development: 'http://localhost:4000'
+  development: ''
 }
 
 handlebars.registerHelper('json', function(context) {

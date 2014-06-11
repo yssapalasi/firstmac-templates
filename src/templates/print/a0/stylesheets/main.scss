@@ -1,11 +1,8 @@
-@import '../../../../global-assets/scss/utils/reset';
-@import '../../../../global-assets/scss/utils/crop_marks';
-
-html, body {
-  box-sizing: border-box;
+body {
+  font-size: 72pt;
+  color: hsl(31,100%,59%);
 }
 
-body {
-  position: relative;
-  background-color: whitesmoke;
+main > article {
+  margin: 4em;
 }
