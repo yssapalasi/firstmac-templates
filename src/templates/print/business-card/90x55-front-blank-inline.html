@@ -1,0 +1,46 @@
+---
+width: 1205px
+height: 792px
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <link href="<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-size: 32pt;
+        font-family: "Helvetica Nue", "Helvetica", "Arial", sans-serif;
+        overflow: hidden;
+      }
+      #content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 1063px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body style="width: 1205px; height: 792px; padding: 35.5px;">
+    <main style="width: 1134px; height: 721px; padding: 35.5px;">
+      <!-- Finished, cropped area (300dpi) = 1063px x 650px = 90mm x 55mm -->
+      <!-- 35.5px padding = 3mm bleed -->
+
+      <!-- Design here -->
+      <article id="content">
+        <h1>Front</h1>
+      </article>
+      <!-- / Design here -->
+
+      <div class='crop-mark top-left'></div>
+      <div class='crop-mark top-right'></div>
+      <div class='crop-mark bottom-left'></div>
+      <div class='crop-mark bottom-right'></div>
+    </main>
+  </body>
+</html>
