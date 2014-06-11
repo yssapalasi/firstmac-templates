@@ -19,7 +19,6 @@ var MetalSmith         = require('metalsmith'),
 
 var tmp                = './.tmp';
 var prod               = './build';
-var env                = argv.type || 'development';
 var base = {
   production: 'http://net-engine.github.io/outfit-starter-templates',
   development: 'http://localhost:4000'
@@ -89,15 +88,25 @@ gulp.task('smith', function () {
   return defered.promise;
 });
 
-gulp.task('build', ['smith'], function () {
+gulp.task('replace-urls', ['smith'], function () {
   return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
-    .pipe(ejs({ baseUrl: base[env] }).on('error', gutil.log))
+      .pipe(ejs({ baseUrl: base['development'] }).on('error', gutil.log))
+      .pipe(gulp.dest(tmp + '/templates'));
+});
+
+gulp.task('replace-urls-production', ['smith'], function () {
+  return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
+      .pipe(ejs({ baseUrl: base['production'] }).on('error', gutil.log))
+      .pipe(gulp.dest(tmp + '/templates'));
+});
+
+gulp.task('build', ['replace-urls'], function () {
+  return gulp.src(tmp + '/**/*', { base: './.tmp' })
     .pipe(gulp.dest(tmp + '/templates'));
 });
 
-gulp.task('build-production', ['smith'], function () {
+gulp.task('build-production', ['replace-urls-production'], function () {
   return gulp.src(tmp + '/**/*', { base: './.tmp' })
-    .pipe(ejs({ baseUrl: base['production'] }).on('error', gutil.log))
     .pipe(gulp.dest(prod));
 });
 
