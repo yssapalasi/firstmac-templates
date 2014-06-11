@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <link href='http://net-engine.github.io/outfit-starter-templates/global-assets/stylesheets/print/global_print.css' rel='stylesheet' />
+    <link href='http://net-engine.github.io/outfit-starter-templates/templates/print/business-card/stylesheets/main.css' rel='stylesheet' />
+  </head>
+
+  <body style="width: 1205px; height: 792px; padding: 35.5px;">
+    <main id="front" style="width: 1134px; height: 721px; padding: 35.5px;">
+      <!-- Finished, cropped area (300dpi) = 1063px x 650px -->
+      <!-- 35.5px padding = 3mm bleed -->
+
+      <article>
+        <header>
+          <h1>{{ first-name }} {{ last-name }}</h1>
+        </header>
+
+        <dl>
+          {{#contact-details}}
+          <dt><i class="icon-{{ type }}"></dt>
+          <dd>{{ detail }}</dd>
+          {{/contact-details}}
+        </dl>
+
+        {{#address}}
+        <address>
+          {{{ address }}}
+        </address>
+        {{/address}}
+      </article>
+
+      <div class='crop-mark top-left'></div>
+      <div class='crop-mark top-right'></div>
+      <div class='crop-mark bottom-left'></div>
+      <div class='crop-mark bottom-right'></div>
+    </main>
+
+    <script src='http://net-engine.github.io/outfit-starter-templates/templates/print/business-card/javascripts/main.js'></script>
+  </body>
+</html>
