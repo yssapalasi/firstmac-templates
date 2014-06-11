@@ -1,0 +1,25 @@
+---
+width: 2622px
+height: 3650px
+---
+
+<!DOCTYPE html>
+<html lang="en" style="width: 2622px; height: 3650px; padding: 35.5px;">
+  <head>
+    <meta charset='utf-8'>
+    <link href='<%= baseUrl %>/templates/print/a4/stylesheets/main.css' rel='stylesheet' />
+  </head>
+
+  <body style="width: 2551px; height: 3579px; padding: 35.5px;">
+    <!-- Finished, cropped area (300dpi) = 2480px x 3508px. 35.5px = 3mm bleed -->
+
+    <h1>{{ title }}</h1>
+
+    <div class='crop-mark top-left'></div>
+    <div class='crop-mark top-right'></div>
+    <div class='crop-mark bottom-left'></div>
+    <div class='crop-mark bottom-right'></div>
+
+    <script src='<%= baseUrl %>/templates/print/a4/javascripts/main.js'></script>
+  </body>
+</html>
