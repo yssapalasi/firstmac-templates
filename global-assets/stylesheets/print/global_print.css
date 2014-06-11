@@ -178,6 +178,9 @@ h5 {
   margin-bottom: 0.8em;
   line-height: 1.6em; }
 
+body {
+  overflow: hidden; }
+
 body, main {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
