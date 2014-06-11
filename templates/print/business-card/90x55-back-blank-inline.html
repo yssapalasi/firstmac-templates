@@ -3,28 +3,40 @@
 <html lang="en">
   <head>
     <meta charset='utf-8'>
-
     <link href='http://net-engine.github.io/outfit-starter-templates/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
-    <link href='http://net-engine.github.io/outfit-starter-templates/templates/print/business-card/stylesheets/main.css'rel='stylesheet' />
+
+    <style>
+      body {
+        font-size: 32pt;
+        font-family: "Helvetica Nue", "Helvetica", "Arial", sans-serif;
+        overflow: hidden;
+      }
+      #content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 1063px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
 
   <body style="width: 1205px; height: 792px; padding: 35.5px;">
-    <main id="back" style="width: 1134px; height: 721px; padding: 35.5px;">
+    <main style="width: 1134px; height: 721px; padding: 35.5px;">
       <!-- Finished, cropped area (300dpi) = 1063px x 650px = 90mm X 55mm -->
       <!-- 35.5px padding = 3mm bleed -->
 
-      <article>
-        <header>
-          <img src="http://net-engine.github.io/outfit-starter-templates/global-assets/images/logos/logo-white.svg" />
-        </header>
+      <!-- Design here -->
+      <article id="content">
+        <h1>Back</h1>
       </article>
+      <!-- / Design here -->
 
       <div class='crop-mark top-left'></div>
       <div class='crop-mark top-right'></div>
       <div class='crop-mark bottom-left'></div>
       <div class='crop-mark bottom-right'></div>
     </main>
-
-    <script src='http://net-engine.github.io/outfit-starter-templates/templates/print/business-card/javascripts/main.js'></script>
   </body>
 </html>
