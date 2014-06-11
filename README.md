@@ -8,18 +8,18 @@ Some blank basic templates for use in the Outfit application
 
 ### No mess no fuss (more manual)
 
-* Download the starter pack
+* Clone the repo and copy anything you want from the `build` directory
 * Edit as you see fit
 * Host your images, css and js somewhere (dropbox, amazon simple storage, google drive)
 * And you're good to go!
 
 ### Something more... automated
 
-Use the build process we have here
+Use the build process we have here.
 
-You'll need node and npm
+[Fork](https://github.com/net-engine/outfit-starter-templates/fork) this repo. Clone it and then:
 
-Once you've got them make sure to install gulp globally
+You'll need [node](http://nodejs.org/). Once you've got it make sure to install gulp globally
 
 ```
 npm install gulp -g
