@@ -4,14 +4,16 @@ Some blank basic templates for use in the Outfit application
 
 [Check them out](http://net-engine.github.io/outfit-starter-templates/)
 
-## No mess no fuss (more manual)
+## Ok, how do I use these?
+
+### No mess no fuss (more manual)
 
 * Download the starter pack
 * Edit as you see fit
 * Host your images, css and js somewhere (dropbox, amazon simple storage, google drive)
 * And you're good to go!
 
-## Something more... automated
+### Something more... automated
 
 Use the build process we have here
 
