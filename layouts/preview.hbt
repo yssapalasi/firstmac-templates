@@ -20,7 +20,7 @@
     <article>
       {{#each this.siblings}}
       <div class='preview' style='height: {{ this.height }}; width: {{ this.width  }}'>
-        <iframe class='preview-frame' data-xml-url="{{this.url}}" height='100%' width='100%'></iframe>
+        <iframe class='preview-frame' data-xml-url="<%=baseUrl%>/{{this.url}}" height='100%' width='100%'></iframe>
       </div>
       {{/each}}
       <div id="data" data-template-data="{{ json data }}"></div>

@@ -21,7 +21,7 @@ var tmp                = './.tmp';
 var prod               = './build';
 var env                = argv.type || 'development';
 var base = {
-  production: '',
+  production: 'http://net-engine.github.io/outfit-starter-templates',
   development: 'http://localhost:4000'
 }
 
@@ -32,7 +32,7 @@ handlebars.registerHelper('json', function(context) {
 function url(){
   return function addUrl(files, metalsmith, done){
     for (var file in files) {
-      files[file].url = '/' + file;
+      files[file].url = file;
     }
     done();
   };
