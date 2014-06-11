@@ -8,11 +8,42 @@ img {
   max-width: 100%;
 }
 
-main > article {
-  margin: 4em;
-}
-
 #back {
   background-color: black;
   color: white;
+}
+
+article {
+  padding: 4em;
+}
+
+.absolute-one-half-left,
+.absolute-one-half-right {
+  position: absolute;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.absolute-one-half-left {
+  left: 0;
+  padding-right: 1em;
+  padding-left: 4em;
+}
+.absolute-one-half-right {
+  right: 0;
+  padding-left: 1em;
+  padding-right: 4em;
+}
+
+.vert-center {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+dl {
+  margin-bottom: 0.85em;
+  dt {
+    width: 2em;
+    float: left;
+  }
 }

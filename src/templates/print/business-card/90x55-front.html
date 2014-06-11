@@ -7,8 +7,9 @@ height: 792px
 <html lang="en">
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/global-assets/stylesheets/print/global_print.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/print/business-card/stylesheets/main.css' rel='stylesheet' />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<%= baseUrl %>/global-assets/stylesheets/print/global_print.css" rel="stylesheet" />
+    <link href="<%= baseUrl %>/templates/print/business-card/stylesheets/main.css" rel="stylesheet" />
   </head>
 
   <body style="width: 1205px; height: 792px; padding: 35.5px;">
@@ -17,22 +18,24 @@ height: 792px
       <!-- 35.5px padding = 3mm bleed -->
 
       <article>
-        <header>
+        <header class="absolute-one-half-left vert-center">
           <h1>{{ first-name }} {{ last-name }}</h1>
         </header>
 
-        <dl>
-          {{#contact-details}}
-          <dt><i class="icon-{{ type }}"></dt>
-          <dd>{{ detail }}</dd>
-          {{/contact-details}}
-        </dl>
+        <section class="absolute-one-half-right vert-center">
+          <dl>
+            {{#contact-details}}
+            <dt><i class="fa fa-fw fa-{{ type }}"></i></dt>
+            <dd>{{ detail }}</dd>
+            {{/contact-details}}
+          </dl>
 
-        {{#address}}
-        <address>
-          {{{ address }}}
-        </address>
-        {{/address}}
+          {{#address}}
+          <address>
+            {{{ address }}}
+          </address>
+          {{/address}}
+        </section>
       </article>
 
       <div class='crop-mark top-left'></div>

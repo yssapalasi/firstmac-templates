@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Print - Business Card (90 x 55)</title>
+  <style>
+    body { margin: 0; }
+    article {
+      padding: 0.5em;
+    }
+    .preview {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0.5em;
+    }
+    .preview-frame { border: 0; }
+  </style>
+</head>
+  <body>
+    <article>
+      
+      <div class='preview' style='height: 792px; width: 1205px'>
+        <iframe class='preview-frame' data-xml-url="http://net-engine.github.io/outfit-starter-templates/templates/print/business-card/90x55-back.html" height='100%' width='100%'></iframe>
+      </div>
+      
+      <div class='preview' style='height: 792px; width: 1205px'>
+        <iframe class='preview-frame' data-xml-url="http://net-engine.github.io/outfit-starter-templates/templates/print/business-card/90x55-front.html" height='100%' width='100%'></iframe>
+      </div>
+      
+      <div id="data" data-template-data="{&quot;first-name&quot;:&quot;Joe&quot;,&quot;last-name&quot;:&quot;Bloggs&quot;,&quot;contact-details&quot;:[{&quot;type&quot;:&quot;phone&quot;,&quot;detail&quot;:&quot;0412 123 456&quot;},{&quot;type&quot;:&quot;email&quot;,&quot;detail&quot;:&quot;mail@example.com&quot;}],&quot;address&quot;:&quot;123 Fake St &lt;br/&gt; Fakeville, STATE 1234&quot;}"></div>
+    </article>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="http://net-engine.github.io/outfit-starter-templates/global-assets/javascripts/previews.js" type="text/javascript"></script>
+  </body>
+</html>
