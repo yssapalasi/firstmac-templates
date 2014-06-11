@@ -96,9 +96,9 @@ gulp.task('build', ['smith'], function () {
 });
 
 gulp.task('build-production', ['smith'], function () {
-  return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
+  return gulp.src(tmp + '/**/*', { base: './.tmp' })
     .pipe(ejs({ baseUrl: base['production'] }).on('error', gutil.log))
-    .pipe(gulp.dest(prod + '/templates'));
+    .pipe(gulp.dest(prod));
 });
 
 gulp.task('watch', function() {
@@ -121,7 +121,7 @@ gulp.task('serve', ['build', 'watch'], function () {
 });
 
 gulp.task('publish', ['build-production'], function () {
-  gulp.src("./build/**/*")
+  return gulp.src("./build/**/*")
     .pipe(deploy());
 });
 
