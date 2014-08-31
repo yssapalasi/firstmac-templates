@@ -19,7 +19,9 @@ p {
 
 #banner-area {
   bottom: 25%;
-  color: whitesmoke; }
+  color: whitesmoke;
+  background-size: cover;
+  background-position: 50% 50%; }
 
 #banner-area:before {
   content: '';
