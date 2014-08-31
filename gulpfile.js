@@ -4,7 +4,6 @@ var gulp               = require('gulp'),
     ejs                = require('gulp-ejs'),
     livereload         = require('gulp-livereload'),
     express            = require('express'),
-    argv               = require('yargs').argv,
     app                = express();
 
 var MetalSmith         = require('metalsmith'),
@@ -22,7 +21,7 @@ var prod               = './build';
 var base = {
   production: 'http://net-engine.github.io/outfit-starter-templates',
   development: ''
-}
+};
 
 handlebars.registerHelper('json', function(context) {
   return JSON.stringify(context);
@@ -31,7 +30,7 @@ handlebars.registerHelper('json', function(context) {
 function url(){
   return function addUrl(files, metalsmith, done){
     for (var file in files) {
-      files[file].url = file;
+      files[file].url =  file;
     }
     done();
   };
@@ -47,9 +46,11 @@ function tree() {
 
         for (var possibleSibling in files) {
           var possibleSiblingPath = possibleSibling.split('/');
-          possibleSiblingPath.pop();
+          var name = possibleSiblingPath.pop();
 
-          if ((file !== possibleSibling) && _.isEqual(path, possibleSiblingPath)) {
+          if ((file !== possibleSibling) &&
+              _.isEqual(path, possibleSiblingPath)) {
+
             siblings.push(files[possibleSibling]);
           }
         }
@@ -61,17 +62,32 @@ function tree() {
   }
 }
 
+function previewIndexes () {
+  return function previewIndexes(files, metalsmith, done){
+    for (var file in files) {
+      (function (file, files) {
+        if ((file.split('/').pop() === 'index.html') && !(files[file].hasOwnProperty('template'))) {
+          return files[file].template = 'preview.hbt';
+        }
+      })(file, files);
+    }
+
+    done();
+  }
+}
+
 
 gulp.task('smith', function () {
   var defered = q.defer();
 
   MetalSmith(__dirname)
+    .use(ignore(['**/_*.scss', '**/.**.**.swp', '**/.DS*']))
+    .use(previewIndexes())
     .use(url())
     .use(tree())
     .use(collection({
       templates: 'templates/**/index.html'
     }))
-    .use(ignore('**/_*.scss'))
     .use(sass({
       outputStyle: "expanded"
     }))
@@ -82,7 +98,7 @@ gulp.task('smith', function () {
     }))
     .destination(tmp)
     .build(function () {
-      return defered.resolve.call(defered, arguments);
+      return defered.resolve.apply(defered, arguments);
     });
 
   return defered.promise;
@@ -129,7 +145,7 @@ gulp.task('serve', ['build', 'watch'], function () {
     });
 });
 
-gulp.task('publish', ['build-production'], function () {
+gulp.task('publish', function () {
   return gulp.src("./build/**/*")
     .pipe(deploy());
 });
