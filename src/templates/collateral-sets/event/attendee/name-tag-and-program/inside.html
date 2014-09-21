@@ -1,0 +1,23 @@
+---
+{
+  "width": "327mm",
+  "height": "160mm"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="<%=baseUrl%>/global-assets/stylesheets/global/reset.css" /> 
+    <link rel="stylesheet" href="<%=baseUrl%>/templates/print/assets/stylesheets/utils/bi-fold.css" /> 
+  </head>
+  <body style="{{ dimensions }}">
+    <!-- A6 (105mm X 148mm) Bi Fold (315mm X 148mm) + 3mm bleed + 3mm slug -->
+    
+    <main id="inside">
+      <article id="first-inside" class="panel panel-first"></article>
+      <article id="second-inside" class="panel panel-second"></article>
+      <article id="third-inside" class="panel panel-third"></article>
+    </main>
+  </body>
+</html>

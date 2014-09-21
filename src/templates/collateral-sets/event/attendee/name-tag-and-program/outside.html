@@ -1,0 +1,64 @@
+---
+{
+  "width": "327mm",
+  "height": "160mm"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="<%=baseUrl%>/global-assets/stylesheets/global/reset.css" /> 
+    <link rel="stylesheet" href="<%=baseUrl%>/templates/print/assets/stylesheets/utils/bi-fold.css" />
+    <link rel="stylesheet" href="<%=baseUrl%>/templates/collateral-sets/event/assets/stylesheets/tedx-logo.css" />
+    <link rel="stylesheet" href="<%=baseUrl%>/templates/collateral-sets/event/attendee/name-tag-and-program/assets/stylesheets/main.css" />
+  </head>
+  <body style="{{ dimensions }}">
+    <!-- A6 (105mm X 148mm) Bi Fold (315mm X 148mm) + 3mm bleed + 3mm slug -->
+    
+    <main id="outside">
+      <article id="flap" class="panel panel-third"></article>
+      
+      <article id="back" class="panel panel-second"></article>
+      
+      <article id="front" class="panel panel-first">
+        <section class="content-area half-height-top background-black" id="front-header">
+          <h1 class="huge">{{ name }}</h1>
+        </section>
+
+        <section class="half-height-bottom background-white" id="font-footer">
+          <div class="content-area">
+            <div class="tedx-logo-html">
+              <h1 class="tedx-logo-html-tedx-location">
+                <strong class="tedx-logo-html-tedx">
+                  Ted
+                  <sup class="tedx-logo-html-x">x</sup>  
+                </strong>
+                <span class="tedx-logo-html-location">
+                  {{ location }}
+                </span>
+              </h1>
+              <p class="tedx-logo-html-descriptor">
+                <em class="tedx-logo-html-descriptor-x">
+                  x
+                </em>
+                <span>
+                  = independantly organized TED event
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="flexible-height-bottom content-area">
+            <p class="big">
+              <strong>{{ day }}</strong>
+            </p>
+            <p class="big">
+              {{ date }} / {{ month }} / {{ year }}
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

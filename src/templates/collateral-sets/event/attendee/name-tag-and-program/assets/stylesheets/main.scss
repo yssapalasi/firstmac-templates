@@ -1,0 +1,64 @@
+body {
+  font-family: 'Helvatica Nue', Helvetica, sans-serif;
+  line-height: 1.6em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.background-black {
+  background-color: black;
+  color: white;
+}
+
+.background-white {
+  background-color: white;
+  color: black;
+}
+
+.big {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+.huge {
+  font-size: 4em;
+  line-height: 1.125em;
+  word-spacing: 40em;
+}
+
+.panel {
+  position: relative;
+}
+
+.content-area {
+  padding: 1.5em;
+}
+
+.half-height-top,
+.half-height-bottom,
+.flexible-height-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.half-height-top {
+  top: 0;
+  bottom: 50%;
+}
+
+.half-height-bottom {
+  top: 50%;
+  bottom: 0;
+}
+
+.flexible-height-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.tedx-logo-html {
+  font-size: 1.5em;
+}

@@ -1,0 +1,41 @@
+$tedx-red: hsl(9,100%,51%);
+
+.tedx-logo-html {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif; 
+  white-space: no-wrap;
+}
+
+.tedx-logo-html-tedx-location {
+  font-size: 2em;
+  line-height: 0.8em;
+}
+
+.tedx-logo-html-tedx {
+  font-weight: 900;
+  text-transform: uppercase;
+  word-spacing: -0.2em;
+  letter-spacing: -0.04em;
+}
+
+.tedx-logo-html-x {
+  font-size: 0.667em;
+  position: relative;
+  top: -0.333em;
+}
+
+.tedx-logo-html-location {
+  font-weight: 300;
+  margin-left: 0.25em;
+  letter-spacing: -0.0025em;
+}
+
+.tedx-logo-html-descriptor {
+  margin-left: 0.05em;
+  font-size: 0.6em;
+  line-height: 1em;
+}
+
+.tedx-logo-html-tedx,
+.tedx-logo-html-descriptor-x {
+  color: $tedx-red;
+}

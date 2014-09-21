@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+main {
+  position: absolute;
+  left: 3mm;
+  right: 3mm;
+  top: 3mm;
+  bottom: 3mm;
+  display: flex;
+}
+.panel-third {
+  flex: 0 0 calc(33.333% - 1mm);
+}
+.panel-second,
+.panel-first {
+  flex: 1 1 33.333%;
+}
