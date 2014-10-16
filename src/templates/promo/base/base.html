@@ -1,0 +1,39 @@
+---
+width: 480px
+height: 480px
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <link href='<%= baseUrl %>/global-assets/stylesheets/global/global.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/promo/base/stylesheets/main.css' rel='stylesheet' />
+
+    {{{ brand-font }}}
+
+  </head>
+  <body class='show-grid small diamond' style='background-color: {{ brand-color }};'>
+    <div class='wrapper'>
+      <div class='content'>
+        <img src='{{ logo }}' class='logo' />
+
+        <div class='message-wrapper'>
+          <div class='message'>
+            {{ message }}
+          </div>
+
+          <div class='call-to-action'>{{ call-to-action }}</div>
+        </div>
+      </div>
+
+      <div class='terms-and-conditions' style="color: {{ brand-color }};">
+        <small>
+          {{ terms-and-conditions }}
+        </small>
+      </div>
+    </div>
+  </body>
+</html>
+
+
