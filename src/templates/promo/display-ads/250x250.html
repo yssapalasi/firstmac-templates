@@ -1,6 +1,6 @@
 ---
-width: 1200px
-height: 1200px
+width: 250px
+height: 250px
 ---
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ height: 1200px
   <head>
     <meta charset='utf-8' />
     <link href='<%= baseUrl %>/global-assets/stylesheets/global/global.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/promo/base/stylesheets/main.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/promo/display-ads/stylesheets/main.css' rel='stylesheet' />
 
     {{{ brand-font }}}
 
@@ -26,9 +26,32 @@ height: 1200px
         background-size: cover;
         background-position: 50% 50%;
       }
+
+      /* Overrides */
+
+      html, :root {
+        font-size: 6pt;
+        text-align: center;
+      }
+
+      .content-block {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      #headline { 
+        margin: 0; 
+        font-size: 1.5em;
+      }
+
+      #terms-and-conditions {
+        padding-top: 0.5em;
+      }
+
+      img.logo { max-height: 6rem }
     </style>
   </head>
-  <body style='width: 1200px; height: 1200px'>
+  <body style='width: 250px; height: 250px'>
     <main class="brand-color-primary_background-color">
       {{#artwork}}
       <header id="artwork" role="banner"></header>
@@ -40,12 +63,6 @@ height: 1200px
         </header>
         
         <section id="sub-content">
-          {{#body}}
-          <div id="body-copy" class="content-block">
-            {{{ body }}}
-          </div>
-          {{/body}}
-          
           <div id="contact">
             <div id="brand-logo" class="content-block">
               <img class="logo" src="{{{ brand-logo }}}" />
@@ -58,15 +75,16 @@ height: 1200px
             </div>
           </div>
 
-          {{#terms-and-conditions}}
+          {{#terms-and-conditions-short}}
           <aside id="terms-and-conditions" class="content-block">
-            {{{ terms-and-conditions }}}
+            {{{ terms-and-conditions-short }}}
           </aside>
-          {{/terms-and-conditions}}
+          {{/terms-and-conditions-short}}
         </section>
       </article>
     </main>
   </body>
 </html>
+
 
 

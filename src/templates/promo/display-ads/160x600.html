@@ -1,6 +1,6 @@
 ---
-width: 1200px
-height: 1200px
+width: 160px
+height: 600px
 ---
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ height: 1200px
   <head>
     <meta charset='utf-8' />
     <link href='<%= baseUrl %>/global-assets/stylesheets/global/global.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/promo/base/stylesheets/main.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/promo/display-ads/stylesheets/main.css' rel='stylesheet' />
 
     {{{ brand-font }}}
 
@@ -28,7 +28,7 @@ height: 1200px
       }
     </style>
   </head>
-  <body style='width: 1200px; height: 1200px'>
+  <body style='width: 160px; height: 600px'>
     <main class="brand-color-primary_background-color">
       {{#artwork}}
       <header id="artwork" role="banner"></header>
@@ -58,15 +58,14 @@ height: 1200px
             </div>
           </div>
 
-          {{#terms-and-conditions}}
+          {{#terms-and-conditions-short}}
           <aside id="terms-and-conditions" class="content-block">
-            {{{ terms-and-conditions }}}
+            {{{ terms-and-conditions-short }}}
           </aside>
-          {{/terms-and-conditions}}
+          {{/terms-and-conditions-short}}
         </section>
       </article>
     </main>
   </body>
 </html>
-
 

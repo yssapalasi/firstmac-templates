@@ -1,6 +1,6 @@
 ---
-width: 1200px
-height: 1200px
+width: 728px
+height: 90px
 ---
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ height: 1200px
   <head>
     <meta charset='utf-8' />
     <link href='<%= baseUrl %>/global-assets/stylesheets/global/global.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/promo/base/stylesheets/main.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/promo/display-ads/stylesheets/main.css' rel='stylesheet' />
 
     {{{ brand-font }}}
 
@@ -26,9 +26,49 @@ height: 1200px
         background-size: cover;
         background-position: 50% 50%;
       }
+
+      /* Overrides */
+
+      #content { 
+        flex-direction: row; 
+        position: relative;
+      }
+
+      #artwork + #content {
+        padding: 1rem;
+      }
+
+      .content-block {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .call-to-action_button { padding: 0.5rem; }
+      
+      #headline { 
+        font-size: 1.75rem; 
+        position: static;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      #brand-logo { padding-top: 0; }
+
+      img.logo { max-height: 4rem; }
+      
+      #terms-and-conditions {
+        background-color: transparent;
+        color: white;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+      }
+
+      #artwork + #content #terms-and-conditions {
+        color: black;
+      }
     </style>
   </head>
-  <body style='width: 1200px; height: 1200px'>
+  <body style='width: 728px; height: 90px'>
     <main class="brand-color-primary_background-color">
       {{#artwork}}
       <header id="artwork" role="banner"></header>
@@ -40,12 +80,6 @@ height: 1200px
         </header>
         
         <section id="sub-content">
-          {{#body}}
-          <div id="body-copy" class="content-block">
-            {{{ body }}}
-          </div>
-          {{/body}}
-          
           <div id="contact">
             <div id="brand-logo" class="content-block">
               <img class="logo" src="{{{ brand-logo }}}" />
@@ -58,15 +92,17 @@ height: 1200px
             </div>
           </div>
 
-          {{#terms-and-conditions}}
+          {{#terms-and-conditions-short}}
           <aside id="terms-and-conditions" class="content-block">
-            {{{ terms-and-conditions }}}
+            {{{ terms-and-conditions-short }}}
           </aside>
-          {{/terms-and-conditions}}
+          {{/terms-and-conditions-short}}
         </section>
       </article>
     </main>
   </body>
 </html>
+
+
 
 

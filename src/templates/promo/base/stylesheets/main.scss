@@ -1,20 +1,17 @@
+$page-margin: 1.5rem;
+$max-logo-height: 8rem;
+$max-logo-width: 16rem;
 
-// @import '/global-assets/stylesheets/global/typography';
-
-$font-family: 'Open Sans', 'Helvetica Nue', 'Helvetica', 'Arial', 'Verdana', sans-serif;
-
-html { height: 100%; }
+html, :root { 
+  height: 100%; 
+  font-size: 6.4pt;
+  line-height: 1.5em;
+}
 
 body {
   overflow: hidden;
   height: 100%;
   position: relative;
-  padding: 0;
-  margin: 0;
-  font-family: $font-family;
-  font-size: 110%;
-  line-height: 1.5em;
-  color: white;
   background-size: cover;
   background-position: 50% 50%;
   -webkit-font-smoothing: antialiased;
@@ -22,122 +19,160 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-img {
-  display: block;
-  margin: auto;
-  width: auto;
-  max-width: 100%;
+main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.wrapper {
+img.logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: $max-logo-height;
+  margin: auto;
+}
+
+.content-block {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.call-to-action_button { 
+  padding: 0.5em; 
+  border-width: thin;
+  border-style: solid;
+  border-radius: 0.25em;
+  font-size: 1.25em;
   text-align: center;
 }
 
-.show-grid {
-  position: relative;
 
-  &:before {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 1000;
-    opacity: .25;
-    background-image: linear-gradient(90deg, transparent 50%, rgba(white, .5) 50%),
-                      linear-gradient(0deg, transparent 50%, rgba(white, .5) 50%);
-    background-size: (100% / 6) (100% / 6);
-  }
+#artwork { flex: 1; }
+
+#content { 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.message-wrapper {
+#titles { 
+  flex: 1; 
+  position: relative;
+  padding: $page-margin;
+}
+
+#headline { 
+  margin: 0; 
+  color: white;
+  font-size: 2rem;
+  line-height: 1.2em;
+  
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 50%;
-  transform: translate(-50%,-50%);
-  margin-top: -8.3334%;
+  transform: translateY(-50%);
 }
 
-.logo {
-  position: absolute;
-  height: 8.3334vh;
-  margin: 12.5% auto;
-  left: 50%;
-  transform: translateX(-50%);
+#sub-content {
+  background-color: white;
+  color: black;
+  padding: $page-margin;
+  flex: 0 0 auto;
 }
 
-.message {
-  border-top: thin solid;
-  border-bottom: thin solid;
-  padding: .5em 0;
-}
-
-.call-to-action {
-  margin-top: .75em;
-  font-size: 1.5em;
-}
-
-.terms-and-conditions {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 16.667%;
-  box-sizing: border-box;
-  padding: .75em;
+#artwork + #content {
+  flex: 0 0 auto;
   background: white;
   color: black;
+  padding: $page-margin;
 
-  small {
-    display: block;
-    font-size: 65%;
-    line-height: 1.25em;
-    text-align: left;
+  #titles {
+    padding: 0.75rem 0; 
+  }
+
+  #headline { color: inherit; }
+
+  #sub-content {
+    background-color: transparent;
+    padding: 0;
   }
 }
 
+#brand-logo {
+  min-width: 6rem;
+  max-width: $max-logo-width;
+  margin: auto;
+}
 
-.small {
-  .content {
-    position: absolute;
-    top: 4.1667%;
-    left: 12.5%;
-    right: 12.5%;
-    bottom: 20.83334%;
-    box-shadow: 0 0 0 1000px white;
+#terms-and-conditions {
+  padding-top: 1.5rem;
+  background-color: white;
+  color: black;
+  font-size: 0.75em;
+  line-height: 1.333em;
+
+  *:last-child { margin-bottom: 0; }
+}
+
+@media (min-width: 150px) and (min-height: 150px) {
+  html, :root { font-size: 7pt; }
+}
+
+@media (min-width: 500px) and (min-height: 500px) {
+  html, :root { font-size: 9pt; }
+  
+  #body-copy {
+    column-count: 2;
+    column-gap: $page-margin;
   }
 
-  .message-wrapper {
-    margin-top: 8.3334%;
-  }
-
-  .logo {
-    margin: 0;
-    width: 50%;
-    height: auto;
-    top: 25%;
-    transform: translate(-50%,-25%);
+  #headline { 
+    font-size: 3rem;
   }
 }
 
-.small.circle .content { border-radius: 50%; }
+@media (orientation: portrait) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 
-.small.diamond .content {
-  box-shadow: none;
+  #artwork + #content #headline { 
+    position: static;
+    transform: none;
+  }
+}
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    height: 75%;
-    margin: -37.5%;
-    box-shadow: 0 0 0 1000px white;
-    transform: rotate(45deg);
-    transform-origin: 50% 50%;
+@media (orientation: landscape) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #artwork {
+    flex: 1 1 33.333%;
+  }
+
+  #artwork + #content {
+    flex: 1 1 66.667%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #artwork {
+    flex: 1 1 50%;
+  }
+
+  #artwork + #content {
+    flex: 1 1 50%;
   }
 }
