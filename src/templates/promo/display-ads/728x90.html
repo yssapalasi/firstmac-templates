@@ -23,7 +23,7 @@ height: 90px
 
       #artwork {
         background-image: url('{{{ artwork }}}');
-        background-size: cover;
+        background-size: {{ artwork-sizing }};
         background-position: 50% 50%;
       }
 
@@ -51,9 +51,20 @@ height: 90px
         transform: none;
       }
 
-      #brand-logo { padding-top: 0; }
+      #brand-logo { 
+        padding-top: 0; 
+        min-height: 4.5rem;
+        position: relative;
+      }
 
-      img.logo { max-height: 4rem; }
+      img.logo { 
+        max-height: 4rem; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 45%;
+        transform: translateY(-50%);
+      }
       
       #terms-and-conditions {
         background-color: transparent;
