@@ -4,7 +4,7 @@ $max-logo-width: 16rem;
 
 html, :root { 
   height: 100%; 
-  font-size: 6.4pt;
+  font-size: 9pt;
   line-height: 1.5em;
 }
 
@@ -31,8 +31,8 @@ main {
 
 img.logo {
   display: block;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  max-width: $max-logo-width;
   max-height: $max-logo-height;
   margin: auto;
 }
@@ -42,7 +42,7 @@ img.logo {
   padding-bottom: 0.75rem;
 }
 
-.call-to-action_button { 
+.outline-button { 
   padding: 0.5em; 
   border-width: thin;
   border-style: solid;
@@ -56,6 +56,8 @@ img.logo {
   flex: 1; 
   background-color: white;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 #content { 
@@ -73,12 +75,8 @@ img.logo {
 #headline { 
   margin: 0; 
   color: white;
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.2em;
-  
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #sub-content {
@@ -120,63 +118,4 @@ img.logo {
   line-height: 1.333em;
 
   *:last-child { margin-bottom: 0; }
-}
-
-@media (min-width: 150px) and (min-height: 150px) {
-  html, :root { font-size: 7pt; }
-}
-
-@media (min-width: 500px) and (min-height: 500px) {
-  html, :root { font-size: 9pt; }
-  
-  #body-copy {
-    column-count: 2;
-    column-gap: $page-margin;
-  }
-
-  #headline { 
-    font-size: 3rem;
-  }
-}
-
-@media (orientation: portrait) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #artwork + #content #headline { 
-    position: static;
-    transform: none;
-  }
-}
-
-@media (orientation: landscape) {
-  main {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #artwork {
-    flex: 1 1 33.333%;
-  }
-
-  #artwork + #content {
-    flex: 1 1 66.667%;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 500px) {
-  main {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #artwork {
-    flex: 1 1 50%;
-  }
-
-  #artwork + #content {
-    flex: 1 1 50%;
-  }
 }

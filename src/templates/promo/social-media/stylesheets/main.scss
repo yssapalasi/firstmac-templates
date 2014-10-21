@@ -1,0 +1,86 @@
+@import '../../base/stylesheets/main';
+
+html, :root {
+  font-size: 10pt;
+}
+
+#titles {
+  padding: 2rem;
+}
+
+#headline {
+  font-size: 2.5em;
+  line-height: 1.125em;
+  margin: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 2rem; right: 2rem;
+  transform: translateY(-50%);
+}
+
+#content {
+  text-align: center;
+}
+
+#sub-content {
+  padding: 2rem;
+}
+
+#artwork + #content {
+  text-align: left;
+  padding: 2rem;
+
+  #titles {
+    padding: 0;
+
+    #headline {
+      position: static;
+      transform: none;
+    }
+  }
+
+  #sub-content {
+    padding: 0;
+  }
+}
+
+main {
+  flex-direction: row;
+}
+
+#artwork, 
+#artwork + #content {
+  flex: 1 1 50%;
+}
+
+#body-copy {
+  display: none;
+}
+
+#contact {
+  font-size: 0;
+}
+
+#brand-logo,
+#call-to-action {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+#brand-logo {
+  margin-right: 1.5rem;
+  width: 50%;
+}
+
+#artwork + #content {
+  #brand-logo,
+  #call-to-action {
+    display: block;
+    margin: auto;
+  }
+}
+
+
+

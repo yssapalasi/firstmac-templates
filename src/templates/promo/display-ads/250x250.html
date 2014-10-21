@@ -24,31 +24,7 @@ height: 250px
       #artwork {
         background-image: url('{{{ artwork }}}');
         background-size: {{ artwork-sizing }};
-        background-position: 50% 50%;
       }
-
-      /* Overrides */
-
-      html, :root {
-        font-size: 6pt;
-        text-align: center;
-      }
-
-      .content-block {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-
-      #headline { 
-        margin: 0; 
-        font-size: 1.5em;
-      }
-
-      #terms-and-conditions {
-        padding-top: 0.5em;
-      }
-
-      img.logo { max-height: 6rem }
     </style>
   </head>
   <body style='width: 250px; height: 250px'>
@@ -69,7 +45,7 @@ height: 250px
             </div>
 
             <div id="call-to-action" class="content-block">
-              <div class="call-to-action_button brand-color-primary_color">
+              <div class="outline-button brand-color-primary_color">
                 {{ call-to-action }}
               </div>
             </div>

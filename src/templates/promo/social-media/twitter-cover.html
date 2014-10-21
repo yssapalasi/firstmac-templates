@@ -1,6 +1,6 @@
 ---
-width: 120px
-height: 600px
+width: 1500px 
+height: 500px
 ---
 
 <!DOCTYPE html>
@@ -8,8 +8,8 @@ height: 600px
   <head>
     <meta charset='utf-8' />
     <link href='<%= baseUrl %>/global-assets/stylesheets/global/global.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/promo/display-ads/stylesheets/main.css' rel='stylesheet' />
-    
+    <link href='<%= baseUrl %>/templates/promo/social-media/stylesheets/main.css' rel='stylesheet' />
+
     {{{ brand-font }}}
 
     <style>
@@ -25,9 +25,13 @@ height: 600px
         background-image: url('{{{ artwork }}}');
         background-size: {{ artwork-sizing }};
       }
+
+      html, :root {
+        font-size: 20pt;
+      }
     </style>
   </head>
-  <body style='width: 120px; height: 600px'>
+  <body style='width: 1500px; height: 500px'>
     <main class="brand-color-primary_background-color">
       {{#artwork}}
       <header id="artwork" role="banner"></header>
@@ -37,33 +41,8 @@ height: 600px
         <header id="titles" class="content-block brand-color-primary_color">
           <h1 id="headline">{{ headline }}</h1>
         </header>
-        
-        <section id="sub-content">
-          {{#body}}
-          <div id="body-copy" class="content-block">
-            {{{ body }}}
-          </div>
-          {{/body}}
-          
-          <div id="contact">
-            <div id="brand-logo" class="content-block">
-              <img class="logo" src="{{{ brand-logo }}}" />
-            </div>
-
-            <div id="call-to-action" class="content-block">
-              <div class="outline-button brand-color-primary_color">
-                {{ call-to-action }}
-              </div>
-            </div>
-          </div>
-
-          {{#terms-and-conditions-short}}
-          <aside id="terms-and-conditions" class="content-block">
-            {{{ terms-and-conditions-short }}}
-          </aside>
-          {{/terms-and-conditions-short}}
-        </section>
       </article>
     </main>
   </body>
 </html>
+
