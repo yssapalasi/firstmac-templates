@@ -1,0 +1,174 @@
+---
+width: calc(100vw - 2em);
+height: calc(100vh - 2em);
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width = device-width">
+
+    {{{ brand-font }}}
+
+    <style type="text/css">
+      /*  Enhancements  */
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+    </style>
+
+    <style type="text/css" media="screen and (max-width: 620px)">
+      /*  Mobile styles  */
+
+      table { width: 100% !important; }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background: #eee; ">
+    <table cellspacing="0" cellpadding="0" width="600px" style="font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.5em; text-align: center; width: 100%; margin: 0 auto;">
+      <tbody>
+        <tr>
+          <td>
+
+            {{!-- Container --}}
+
+
+            {{#brand-logo}}
+
+              <table cellspacing="0" cellpadding="0" width="600px" background="" style="margin: 0 auto; font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.5em; text-align: center;">
+                <tbody>
+                  <tr>
+                    <td style="padding: 2em;">
+                      <img src="{{{ brand-logo }}}" style="display: block; margin: auto; border: 0; max-height: 4em; max-width: 40%;">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            {{/brand-logo}}
+
+
+            {{#artwork}}
+
+              <table cellspacing="0" cellpadding="0" width="600px" background="{{{ artwork }}}" style="margin: 0 auto; font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.5em; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;">
+                <tbody>
+                  <tr>
+                    <td style="height: 300px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            {{/artwork}}
+
+            {{^artwork}}
+
+              <table cellspacing="0" cellpadding="0" width="600px" style="margin: 0 auto; font-family: Helvetica Neue, sans-serif; font-size: 100%; background-color: {{ brand-color-primary }};">
+                <tbody>
+                  <tr>
+                    <td style="height: .6667em;">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            {{/artwork}}
+
+            <table cellspacing="0" cellpadding="0" width="600px" style="background-color: white; margin: 0 auto; font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.5em;">
+              <tbody>
+                <tr>
+                  <td style="padding: 1.5em;">
+
+                    {{#headline}}
+
+                      <table cellspacing="0" cellpadding="0" style="width: 100%; font-family: Helvetica Neue, sans-serif; font-size: 100%; text-align: center;">
+                        <tbody>
+                          <tr>
+                            <td style="padding-bottom: .75em;">
+                              <h1 style="font-size: 1.5em; font-weight: bold; line-height: 1.25em; margin: 0;">{{ headline }}</h1>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-bottom: .75em;">
+                              <span style="display: inline-block; width: 40%; border-top: 2px solid #888;"></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    {{/headline}}
+
+                    <table cellspacing="0" cellpadding="0" style="width: 100%; font-family: Helvetica Neue, sans-serif; font-size: 100%; text-align: left; line-height: 1.333em;">
+                      <tbody>
+                        <tr>
+                          <td>
+                            {{{ body }}}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    {{#call-to-action}}
+
+                      <table cellspacing="0" cellpadding="0" style="width: 100%; font-family: Helvetica Neue, sans-serif; font-size: 100%; text-align: center; line-height: 1.5em;">
+                        <tbody>
+                          <tr>
+                            <td style="padding: 1em;">
+
+                            {{#call-to-action-url}}
+                              <a href="{{ call-to-action-url }}" style="display: inline-block; font-size: 90%; font-weight: bold; line-height: 1.5em; padding: .75em 1em; margin: 0 auto; text-decoration: none; text-transform: uppercase; color: {{ brand-color-primary }}; border: 2px solid {{ brand-color-primary }}; border-radius: 2px;">{{ call-to-action }}</a>
+                            {{/call-to-action-url}}
+
+                            {{^call-to-action-url}}
+                              <span style="font-size: 1.5em; line-height: 1.5em; margin: 0;">{{ call-to-action }}</span>
+                            {{/call-to-action-url}}
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    {{/call-to-action}}
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table cellspacing="0" cellpadding="0" width="600px" style="margin: 0 auto; font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.5em; text-align: center;">
+              <tbody>
+                <tr>
+                  <td style="font-size: 80%; line-height: 1.5em; color: #888; padding: 1.5em;">
+                    {{{ disclaimer }}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: 90%; line-height: 1.25em;">
+                    {{#facebook_url}}
+                      <a href="{{ facebook_url }}" style="color: #666; text-decoration: none; margin: 0; padding: 0 20px; display: inline-block; backgroun-position: left; background-repeat: no-repeat; background-image: url('//netengine-assets.s3.amazonaws.com/icons/facebook.gif')">Facebook</a>
+                    {{/facebook_url}}
+                    {{#twitter_url}}
+                      <a href="{{ twitter_url }}" style="color: #666; text-decoration: none; margin: 0; padding: 0 24px; display: inline-block; backgroun-position: left; background-repeat: no-repeat; background-image: url('//netengine-assets.s3.amazonaws.com/icons/twitter.gif')">Twitter</a>
+                    {{/twitter_url}}
+                    {{#linkedin_url}}
+                      <a href="{{ linkedin_url }}" style="color: #666; text-decoration: none; margin: 0; padding: 0 20px; display: inline-block; backgroun-position: left; background-repeat: no-repeat; background-image: url('//netengine-assets.s3.amazonaws.com/icons/linkedin.gif')">Linkedin</a>
+                    {{/linkedin_url}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            {{!-- End Container --}}
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+
+
+
