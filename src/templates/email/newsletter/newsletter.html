@@ -51,6 +51,15 @@ height: calc(100vh - 2em);
 
             {{/brand-logo}}
 
+            {{^brand-logo}}
+              <table cellspacing="0" cellpadding="0" width="600px" background="" style="margin: 0 auto; font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.5em; text-align: center;">
+                <tbody>
+                  <tr>
+                    <td style="padding: 1em;"></td>
+                  </tr>
+                </tbody>
+              </table>
+            {{/brand-logo}}
 
             {{#artwork}}
 
@@ -157,6 +166,14 @@ height: calc(100vh - 2em);
                       <a href="{{ linkedin_url }}" style="color: #666; text-decoration: none; margin: 0; padding: 0 20px; display: inline-block; backgroun-position: left; background-repeat: no-repeat; background-image: url('//netengine-assets.s3.amazonaws.com/icons/linkedin.gif')">Linkedin</a>
                     {{/linkedin_url}}
                   </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td style="padding: 1em;"></td>
                 </tr>
               </tbody>
             </table>
