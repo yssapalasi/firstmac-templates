@@ -18,6 +18,29 @@
       margin: 0.5em;
     }
     .preview-frame { border: 0; }
+    a.home-link {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.75);
+      padding: .75em 1em;
+      color: white;
+      text-decoration: none;
+      border-top-right-radius: 3px;
+      font-family: monospace;
+      text-transform: uppercase;
+      opacity: .25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    a.home-link:before {
+      content: '/';
+      margin-right: .5em;
+    }
+    a.home-link:hover {
+      opacity: 1;
+    }
   </style>
 </head>
   <body>
@@ -60,6 +83,8 @@
       </div>
       <div id="data" data-template-data="{&quot;long-message&quot;:&quot;&lt;p&gt;Donec congue lacinia dui, a porttitor lectus condimentum laoreet&lt;/p&gt;&quot;,&quot;short-message&quot;:&quot;&lt;p&gt;Donec congue lacinia dui&lt;/p&gt;&quot;,&quot;call-to-action&quot;:&quot;Call to action too long&quot;,&quot;background-image&quot;:&quot;http://www.successfulworkplace.org/wp-content/uploads/2013/11/Chulture-change-is-a-bear.jpg&quot;}"></div>
     </article>
+
+    <a class="home-link" href="http://net-engine.github.io/outfit-starter-templates/">Home</a>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
