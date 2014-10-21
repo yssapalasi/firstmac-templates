@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <link href='http://net-engine.github.io/outfit-starter-templates/global-assets/stylesheets/global/global.css' rel='stylesheet' />
+
+    {{{ brand-font }}}
+
+    <style>
+      .brand-color-primary_color                { color: {{ brand-color-primary }}; }
+      .brand-color-primary_background-color     { background-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-color         { border-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-left-color    { border-left-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-top-color     { border-top-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-right-color   { border-right-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-bottom-color  { border-bottom-color: {{ brand-color-primary }}; }  
+
+      main {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        background-image: url({{{ artwork }}});
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      #content {
+        position: absolute;
+        left: 3em;
+        right: 3em;
+        top: 3em;
+        bottom: 3em;
+        background-color: white;
+      }
+
+      #logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 80%;
+        max-height: 80%;
+      }
+    </style>
+  </head>
+  <body style='width: 90mm; height: 55mm'>
+    <main>
+      <article id="content">
+        <img src="{{{ brand-logo }}}" id="logo" />
+      </article>
+    </main>
+  </body>
+</html>
