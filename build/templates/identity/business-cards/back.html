@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <link href='http://net-engine.github.io/outfit-starter-templates/global-assets/stylesheets/global/global.css' rel='stylesheet' />
+
+    {{{ brand-font }}}
+
+    <style>
+      .brand-color-primary_color                { color: {{ brand-color-primary }}; }
+      .brand-color-primary_background-color     { background-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-color         { border-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-left-color    { border-left-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-top-color     { border-top-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-right-color   { border-right-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-bottom-color  { border-bottom-color: {{ brand-color-primary }}; }
+
+      html, :root {
+        font-size: 7pt;
+      }
+
+      body {
+        background-color: white;
+      }
+
+      main {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+      }
+
+      #content {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        right: 2rem;
+        font-size: 0;
+      }
+
+      #identifiers,
+      #contact {
+        font-size: 1rem;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      #identifiers { padding-right: 0.5rem }
+      #contact { padding-right: 0.5rem }
+
+      #name {
+        margin: 0;
+        font-size: 1.5em;
+        line-height: 1.125em;
+      }
+
+      #title {
+        margin-bottom: 0;
+        font-size: 1em;
+        line-height: 1.125em;
+      }
+
+    </style>
+  </head>
+  <body style='width: 90mm; height: 55mm'>
+    <main>
+      <article id="content">
+        <section id="identifiers" class="brand-color-primary_color">
+          <h1 id="name">{{ name }}</h1>
+          <h2 id="title">{{ title }}</h2>
+        </section>
+        <section id="contact">
+          <ul>
+            <li>{{ phone }}</li>
+            <li>{{ email }}</li>
+            <li>{{ twitter }}</li>
+            <li>{{ web-address }}</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
+
