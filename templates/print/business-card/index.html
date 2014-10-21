@@ -18,6 +18,29 @@
       margin: 0.5em;
     }
     .preview-frame { border: 0; }
+    a.home-link {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.75);
+      padding: .75em 1em;
+      color: white;
+      text-decoration: none;
+      border-top-right-radius: 3px;
+      font-family: monospace;
+      text-transform: uppercase;
+      opacity: .25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    a.home-link:before {
+      content: '/';
+      margin-right: .5em;
+    }
+    a.home-link:hover {
+      opacity: 1;
+    }
   </style>
 </head>
   <body>
@@ -36,6 +59,8 @@
       </div>
       <div id="data" data-template-data="{&quot;first-name&quot;:&quot;Joe&quot;,&quot;last-name&quot;:&quot;Bloggs&quot;,&quot;contact-details&quot;:[{&quot;type&quot;:&quot;phone&quot;,&quot;detail&quot;:&quot;0412 123 456&quot;},{&quot;type&quot;:&quot;envelope&quot;,&quot;detail&quot;:&quot;mail@example.com&quot;},{&quot;type&quot;:&quot;home&quot;,&quot;detail&quot;:&quot;example.com&quot;}],&quot;address&quot;:&quot;123 Fake St, Fakeville &lt;br/&gt; STATE, Country 1234&quot;}"></div>
     </article>
+
+    <a class="home-link" href="http://net-engine.github.io/outfit-starter-templates/">Home</a>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>

@@ -18,6 +18,29 @@
       margin: 0.5em;
     }
     .preview-frame { border: 0; }
+    a.home-link {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.75);
+      padding: .75em 1em;
+      color: white;
+      text-decoration: none;
+      border-top-right-radius: 3px;
+      font-family: monospace;
+      text-transform: uppercase;
+      opacity: .25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    a.home-link:before {
+      content: '/';
+      margin-right: .5em;
+    }
+    a.home-link:hover {
+      opacity: 1;
+    }
   </style>
 </head>
   <body>
@@ -25,8 +48,10 @@
       <div class='preview' style='height: calc(100vh - 2em);; width: calc(100vw - 2em);'>
         <iframe class='preview-frame' data-xml-url="http://net-engine.github.io/outfit-starter-templates/templates/email/newsletter/newsletter.html" height='100%' width='100%'></iframe>
       </div>
-      <div id="data" data-template-data="{&quot;brand-color-primary&quot;:&quot;#A71E5E&quot;,&quot;brand-font&quot;:&quot;&quot;,&quot;brand-logo&quot;:&quot;https://www.cciq.com.au/assets/Uploads/cciq-powering-business-potential.png&quot;,&quot;artwork&quot;:&quot;http://placehold.it/600x300/444&quot;,&quot;headline&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&quot;,&quot;body&quot;:&quot;&lt;p&gt;Bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.&lt;/p&gt; &lt;p&gt;Bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.&lt;/p&gt;&quot;,&quot;call-to-action&quot;:&quot;Like us on Facebook&quot;,&quot;call-to-action-url&quot;:&quot;http://google.com&quot;,&quot;facebook_url&quot;:&quot;http://facebook.com/mybusiness&quot;,&quot;twitter_url&quot;:&quot;http://twitter.com/mybusiness&quot;,&quot;linkedin_url&quot;:&quot;http://linkedin.com/mybusiness&quot;,&quot;disclaimer&quot;:&quot;Terms and conditions apply. Visit example.com/terms for more information.&quot;}"></div>
+      <div id="data" data-template-data="{&quot;brand-color-primary&quot;:&quot;#A71E5E&quot;,&quot;brand-font&quot;:&quot;&quot;,&quot;brand-logo&quot;:&quot;https://www.cciq.com.au/assets/Uploads/cciq-powering-business-potential.png&quot;,&quot;artwork&quot;:&quot;https://www.cciq.com.au/assets/Banners/_resampled/SetWidth980-8207-CCIQ-Website-Home-Page-banner-01.jpg&quot;,&quot;headline&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&quot;,&quot;body&quot;:&quot;&lt;p&gt;Bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.&lt;/p&gt; &lt;p&gt;Bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.&lt;/p&gt;&quot;,&quot;call-to-action&quot;:&quot;Like us on Facebook&quot;,&quot;call-to-action-url&quot;:&quot;http://google.com&quot;,&quot;facebook_url&quot;:&quot;http://facebook.com/mybusiness&quot;,&quot;twitter_url&quot;:&quot;http://twitter.com/mybusiness&quot;,&quot;linkedin_url&quot;:&quot;http://linkedin.com/mybusiness&quot;,&quot;disclaimer&quot;:&quot;Terms and conditions apply. Visit example.com/terms for more information.&quot;}"></div>
     </article>
+
+    <a class="home-link" href="http://net-engine.github.io/outfit-starter-templates/">Home</a>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>

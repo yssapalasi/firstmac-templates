@@ -18,6 +18,29 @@
       margin: 0.5em;
     }
     .preview-frame { border: 0; }
+    a.home-link {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.75);
+      padding: .75em 1em;
+      color: white;
+      text-decoration: none;
+      border-top-right-radius: 3px;
+      font-family: monospace;
+      text-transform: uppercase;
+      opacity: .25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    a.home-link:before {
+      content: '/';
+      margin-right: .5em;
+    }
+    a.home-link:hover {
+      opacity: 1;
+    }
   </style>
 </head>
   <body>
@@ -57,6 +80,8 @@
       </div>
       <div id="data" data-template-data="{&quot;brand-color-primary&quot;:&quot;hsl(200,95%,50%)&quot;,&quot;brand-font&quot;:&quot;&quot;,&quot;brand-logo&quot;:&quot;http://netengine-blog-media.s3.amazonaws.com/netengine-logo-blue.svg&quot;,&quot;artwork&quot;:&quot;http://netengine.com.au/assets/images/heros/1.jpg&quot;,&quot;artwork-sizing&quot;:&quot;cover&quot;,&quot;headline&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&quot;,&quot;headline-short&quot;:&quot;Lorem ipsum dolor sit amet.&quot;,&quot;body&quot;:&quot;&lt;p&gt;Bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci.&lt;/p&gt;&quot;,&quot;body-short&quot;:&quot;&lt;p&gt;Bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.&lt;/p&gt;&quot;,&quot;call-to-action&quot;:&quot;Like us on Facebook&quot;,&quot;terms-and-conditions&quot;:&quot;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;&quot;,&quot;terms-and-conditions-short&quot;:&quot;&lt;p&gt;Terms and conditions apply.&lt;br /&gt;Visit example.com/terms for more information.&lt;/p&gt;&quot;}"></div>
     </article>
+
+    <a class="home-link" href="http://net-engine.github.io/outfit-starter-templates/">Home</a>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
