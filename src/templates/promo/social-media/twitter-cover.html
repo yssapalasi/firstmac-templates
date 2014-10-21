@@ -1,0 +1,50 @@
+---
+width: 1500px 
+height: 500px
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/global/global.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/promo/social-media/stylesheets/main.css' rel='stylesheet' />
+
+    {{{ brand-font }}}
+
+    <style>
+      .brand-color-primary_color                { color: {{ brand-color-primary }}; }
+      .brand-color-primary_background-color     { background-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-color         { border-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-left-color    { border-left-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-top-color     { border-top-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-right-color   { border-right-color: {{ brand-color-primary }}; }
+      .brand-color-primary_border-bottom-color  { border-bottom-color: {{ brand-color-primary }}; }
+
+      #artwork {
+        background-image: url('{{{ artwork }}}');
+        background-size: {{ artwork-sizing }};
+      }
+
+      html, :root {
+        font-size: 20pt;
+      }
+
+      #artwork + #content { display: none }
+    </style>
+  </head>
+  <body style='width: 1500px; height: 500px'>
+    <main class="brand-color-primary_background-color">
+      {{#artwork}}
+      <header id="artwork" role="banner"></header>
+      {{/artwork}}
+
+      <article id="content">
+        <header id="titles" class="content-block brand-color-primary_color">
+          <h1 id="headline">{{ headline }}</h1>
+        </header>
+      </article>
+    </main>
+  </body>
+</html>
+

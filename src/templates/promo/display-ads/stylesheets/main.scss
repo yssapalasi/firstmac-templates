@@ -1,0 +1,158 @@
+@import '../../base/stylesheets/main';
+
+html, :root { 
+  font-size: 6pt; 
+  text-align: center;
+}
+
+.content-block {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#headline { 
+  margin: 0; 
+  font-size: 1.2em;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#terms-and-conditions {
+  padding-top: 0.5em;
+}
+
+img.logo { max-height: 4rem }
+
+@media (min-width: 120px) and (min-height: 250px) {
+  html, :root { 
+    font-size: 7pt; 
+  }
+}
+
+@media (min-width: 120px) and (min-height: 300px) {
+  html, :root { 
+    font-size: 7pt; 
+    text-align: left;
+  }
+
+  #headline { 
+    font-size: 2em; 
+  }
+
+  .content-block {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #headline { 
+    margin: 0; 
+    font-size: 1.75em;
+  }
+
+  #terms-and-conditions {
+    padding-top: 0.75em;
+  }
+
+  img.logo { max-height: 6rem }
+}
+
+@media (min-width: 300px) and (min-height: 250px) {
+  #headline { 
+    font-size: 2em; 
+  }
+}
+
+@media (orientation: portrait) {
+  #artwork + #content #headline { 
+    position: static;
+    transform: none;
+  }
+}
+
+@media (orientation: landscape) {
+  html, :root { 
+    text-align: left;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #artwork {
+    flex: 1 1 33.333%;
+  }
+
+  #artwork + #content {
+    flex: 1 1 66.667%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #artwork {
+    flex: 1 1 50%;
+  }
+
+  #artwork + #content {
+    flex: 1 1 50%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 100px) {
+  #content { 
+    flex-direction: row; 
+    position: relative;
+  }
+
+  #artwork + #content {
+    padding: 1rem;
+  }
+
+  .content-block {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #titles { margin-right: 0.75rem; }
+
+  #headline { 
+    font-size: 1.75rem; 
+    position: static;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  #brand-logo { 
+    padding-top: 0; 
+    min-height: 4.5rem;
+    position: relative;
+  }
+
+  img.logo { 
+    max-height: 4rem; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  #terms-and-conditions {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  #artwork + #content #terms-and-conditions {
+    color: black;
+  }
+}

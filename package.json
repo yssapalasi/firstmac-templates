@@ -1,6 +1,7 @@
 {
   "name": "outfit-starter",
   "version": "0.0.0",
+  "repository": "https://github.com/net-engine/outfit-starter-templates",
   "author": "Brad Parker",
   "devDependencies": {
     "express": "~4.2.0",
