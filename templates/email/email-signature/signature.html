@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width = device-width">
+
+    <style type="text/css">
+      /*  Enhancements  */
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background: white;">
+    <table cellspacing="0" cellpadding="0" style="font-family: Helvetica Neue, sans-serif; font-size: 100%; line-height: 1.45em; width: 100%; margin: 0 auto; text-align: left;">
+      <tbody>
+
+        <tr>
+          {{#brand-logo}}
+            <td style="padding-right: 1em; padding-bottom: .75em;">
+              <img src="{{{ brand-logo }}}" style="display: block; border: 0; height: 3.5em;">
+            </td>
+          {{/brand-logo}}
+
+          <td width="100%" style=" padding-bottom: .75em;">
+            <div style="line-height: 1.25em">
+              <strong>{{ name }}</strong>
+
+              {{#position}}
+                <span style="display: inline-block; font-size: 90%;">{{ position }}</span>
+              {{/position}}
+            </div>
+
+            {{#phone}}
+              <div style="font-size: 90%; line-height: 1.25em">
+                <a href="tel:{{ phone }}" style="color: #444; text-decoration: none;">{{ phone }}</a>
+              </div>
+            {{/phone}}
+
+            {{#website}}
+              <div style="font-size: 90%; line-height: 1.25em">
+                <a style="color: {{brand-color-primary}};" href="{{ website }}">{{ website }}</a>
+              </div>
+            {{/website}}
+          </td>
+        </tr>
+
+        {{#footer-text}}
+          <tr>
+            <td colspan="2" style="font-size: 75%; color: #444; line-height: 1.45em;">
+              {{{ footer-text }}}
+            </td>
+          </tr>
+        {{/footer-text}}
+
+      </tbody>
+    </table>
+  </body>
+</html>
